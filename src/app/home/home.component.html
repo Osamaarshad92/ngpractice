@@ -1,0 +1,18 @@
+<div class="container">
+  <main class="main">
+    <div class="main-container
+  ">
+      <section>
+        <h1>Content ({{ itemCount }})</h1>
+        <p>Oh God, my uncle. How am I ever gonna explain this? What?! In my experience, there is no such thing as luck. Kid, I've flown from one side of this galaxy to the other. I've seen a lot of strange stuff, but I've never seen anything to make me believe there's one all-powerful Force controlling everything. </p>
+        <form>
+          <input type="text" name="item" class="txt" placeholder="Life goal..." [(ngModel)]="goalText">
+          <input type="submit" class="btn" [value]="btnText" (click)="addItem()">
+        </form> 
+        <p class="para" *ngFor="let goal of goals; let i = index" (click)="removeitem(i)">
+          {{ goal }}
+        </p> 
+      </section>
+    </div>
+   </main>
+</div>  
